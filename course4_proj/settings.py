@@ -19,6 +19,7 @@ class Dev(Configuration):
     # Build paths inside the project like this: BASE_DIR / 'subdir'.
     BASE_DIR = Path(__file__).resolve().parent.parent
 
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
     # Quick-start development settings - unsuitable for production
     # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -116,7 +117,7 @@ class Dev(Configuration):
           'NAME': BASE_DIR / 'db.sqlite3',
       }
     }
-
+    ADMINS = [("Ben", "ben@example.com")]
 
     # Password validation
     # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
