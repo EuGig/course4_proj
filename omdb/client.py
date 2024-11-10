@@ -66,7 +66,7 @@ class OmdbClient:
     params["api_key"] = self.api_key
 
     resp = requests.get(OMDB_API_URL, params=params)
-    resp.rais_for_status()
+    resp.raise_for_status()
     return resp
 
   def get_by_imdb_id(self, imdb_id):
